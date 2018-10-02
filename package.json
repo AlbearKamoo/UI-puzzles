@@ -1,0 +1,43 @@
+{
+  "name": "my-react-boilerplate",
+  "version": "1.0.0",
+  "description": "A clonable React boilerplate for future projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "webpack-dev-server --mode development",
+    "start": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbearKamoo/my-react-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "React"
+  ],
+  "author": "Marcelo Autran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlbearKamoo/my-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/AlbearKamoo/my-react-boilerplate#readme",
+  "dependencies": {
+    "mobx": "^5.5.0",
+    "mobx-react": "^5.2.8",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
