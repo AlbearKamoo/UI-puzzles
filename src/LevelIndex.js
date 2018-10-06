@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'react-router';
 
 import LevelBlock from './LevelBlock';
 
@@ -13,9 +14,12 @@ export default class LevelIndex extends React.Component {
     console.log(levels);
     return (
       <div className='index-container row'>
-        {levels.map((level) =>
-          <LevelBlock level={{...level}} />
-        )}
+          {levels.map((level) =>
+            <LevelBlock
+              history={history}
+              key={level.index}
+              level={{...level}} />
+          )}
       </div>
     )
   }

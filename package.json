@@ -25,9 +25,12 @@
   "dependencies": {
     "mobx": "^5.5.0",
     "mobx-react": "^5.2.8",
+    "mobx-react-router": "^4.0.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "save-dev": "^2.0.0",
     "webpack": "^4.20.2",
     "webpack-dev-server": "^3.1.9"
   },
@@ -36,6 +39,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "babel-preset-mobx": "^2.0.0",
     "css-loader": "^1.0.0",
     "style-loader": "^0.23.0",
     "webpack-cli": "^3.1.2"

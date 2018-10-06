@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="128" cy="128" r="128"></circle>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle stroke="#4F4F4F" stroke-width="2" cx="128" cy="128" r="127"></circle>
+        <g id="Group" mask="url(#mask-2)" fill="#C33A3A" fill-rule="nonzero">
+            <g transform="translate(22.000000, 164.000000)">
+                <ellipse id="Oval" cx="107.5" cy="105.5" rx="107.5" ry="90.5"></ellipse>
+                <rect id="Rectangle" x="87" y="0" width="38" height="33" rx="8"></rect>
+            </g>
+        </g>
+        <circle id="Oval" fill="#583510" fill-rule="nonzero" mask="url(#mask-2)" cx="128" cy="105" r="66"></circle>
+        <path d="M83.1304359,73 C98.0852806,78.7222222 113.040125,81.5833333 127.99497,81.5833333 C142.949815,81.5833333 157.90466,78.7222222 172.859504,73 C173.662497,108.631435 171.023407,133.427732 164.942234,147.388889 C158.861061,161.350046 146.545306,170.887083 127.99497,176 C107.593739,168.657405 94.8381357,159.120368 89.7281615,147.388889 C84.6181874,135.65741 82.4189455,110.861114 83.1304359,73 Z" id="Path" fill="#DED3B2" fill-rule="nonzero" mask="url(#mask-2)"></path>
+    </g>
+</svg>
