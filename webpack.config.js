@@ -25,6 +25,21 @@ module.exports = {
           { loader: 'style-loader' },
           { loader: 'css-loader' }
         ]
+      },
+      {
+        test: /\.svg$/,
+        include: path.join(__dirname, 'src', 'assets'),
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
+        ]
       }
     ]
   },

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import AvatarImage from '../assets/avatar.svg';
+
 export default class Level1 extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +11,7 @@ export default class Level1 extends React.Component {
     return (
         <div>
           <div>
-            <img src='../assets/avatar.svg'/>
+            <AvatarImage />
           </div>
           <div>
             Email:

@@ -11,6 +11,7 @@
             <use xlink:href="#path-1"></use>
         </mask>
         <circle stroke="#4F4F4F" stroke-width="2" cx="128" cy="128" r="127"></circle>
+        <circle id="Oval" stroke="#4F4F4F" stroke-width="2" fill="#FFD99D" fill-rule="nonzero" mask="url(#mask-2)" cx="128" cy="128" r="127"></circle>
         <g id="Group" mask="url(#mask-2)" fill="#C33A3A" fill-rule="nonzero">
             <g transform="translate(22.000000, 164.000000)">
                 <ellipse id="Oval" cx="107.5" cy="105.5" rx="107.5" ry="90.5"></ellipse>
