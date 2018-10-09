@@ -11,7 +11,6 @@ export default class LevelIndex extends React.Component {
   }
 
   render() {
-    console.log(levels);
     return (
       <div className='index-container row'>
           {levels.map((level) =>
