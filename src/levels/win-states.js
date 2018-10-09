@@ -6,4 +6,4 @@ const winStateFunctions = [
   level1WinState
 ]
 
-export default winStateFunctions
+export default winStateFunctions;

@@ -4,15 +4,37 @@
   flex-direction: column;
 }
 
+.level-1-stage {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  border-radius: 8px;
+}
+
+.avatar {
+  height: 128px;
+  width: 128px;
+}
+
+.inputs-wrapper {
+  margin-top: 20px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .input-container {
   display: flex;
   flex-direction: row;
   width: 200px;
   justify-content: space-between;
-  margin: 5px;
+  align-items: center;
 }
 
-.avatar {
-  height: 64px;
-  width: 64px;
+.input {
+  height: 24px;
+  border: 1px solid #666688;
+  border-radius: 2px;
 }

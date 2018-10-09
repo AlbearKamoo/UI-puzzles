@@ -35,28 +35,34 @@ export default class Level1 extends React.Component {
   render() {
     return (
         <div className={"level-container center-contents"}>
-          <div >
-            <AvatarImage className={"avatar"}/>
-          </div>
-          <div className={"input-container"}>
+          <div className={"level-1-stage center-contents"}>
             <div>
-              Email:
+              <AvatarImage className={"avatar"}/>
             </div>
-            <input
-              value={this.state.email}
-              onChange={this.handleChange}
-              name="email"
-              type="text"></input>
-          </div>
-          <div className={"input-container"}>
-            <div>
-              Password:
+            <div className={"inputs-wrapper"}>
+              <div className={"input-container"}>
+                <div>
+                  Email:
+                </div>
+                <input
+                  className={"input"}
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  name="email"
+                  type="text"></input>
+              </div>
+              <div className={"input-container"}>
+                <div>
+                  Password:
+                </div>
+                <input
+                  className={"input"}
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  name="password"
+                  type="password"></input>
+              </div>
             </div>
-            <input
-              value={this.state.password}
-              onChange={this.handleChange}
-              name="password"
-              type="password"></input>
           </div>
         </div>
     )
