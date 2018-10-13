@@ -6,9 +6,14 @@ function level2WinState(state) {
   return (state.blockColor === 'rgb(153, 102, 255)');
 }
 
+function level3WinState(state) {
+  return (state.left && state.middle && state.right);
+}
+
 const winStateFunctions = [
   level1WinState,
-  level2WinState
+  level2WinState,
+  level3WinState
 ]
 
 export default winStateFunctions;

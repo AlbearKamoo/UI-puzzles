@@ -6,8 +6,8 @@ import winStateFunctions from './win-states.js'
 import AvatarImage from '../assets/avatar.svg';
 
 import './styles/level-styles.css';
-import './styles/level2.css'
-import '../styles.css'
+import './styles/level2.css';
+import '../styles.css';
 
 function getRgbString(stateObj) {
   const { red, green, blue } = stateObj;
@@ -86,5 +86,4 @@ export default class Level2 extends React.Component {
         </div>
     )
   }
-
 }
