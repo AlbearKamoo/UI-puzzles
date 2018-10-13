@@ -5,8 +5,9 @@ import winStateFunctions from './win-states.js'
 
 import AvatarImage from '../assets/avatar.svg';
 
-import './level-styles.css';
-import '../styles.css'
+import './styles/level-styles.css';
+import './styles/level1.css';
+import '../styles.css';
 
 @inject('RoutingStore')
 @observer
