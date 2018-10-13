@@ -1,0 +1,15 @@
+.puzzle-checkbox {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  outline: none;
+}
+
+.checked {
+  background-color: #88EEAA;
+  border: 1px solid white;
+}
