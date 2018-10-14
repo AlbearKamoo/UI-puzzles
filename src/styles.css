@@ -58,3 +58,20 @@
 .number-display {
   font-size: 48px;
 }
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+}
+
+.back-arrow {
+  width: 40px;
+  height: 50px;
+  transition: transform .2s ease-out;
+  transform: translateX(0%);
+}
+
+.back-arrow:hover {
+  transform: translate(-20%);
+}

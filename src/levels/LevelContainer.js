@@ -3,6 +3,8 @@ import { inject, observer } from 'mobx-react';
 
 import WinStateModal from '../component-lib/WinStateModal';
 
+import BackArrow from '../assets/back-arrow.svg';
+
 import winStateFunctions from './win-states.js'
 
 @inject('RoutingStore')
@@ -15,7 +17,7 @@ export default class LevelContainer extends React.Component {
       winState: false,
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.returnToIndex = this.returnToIndex.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -26,7 +28,7 @@ export default class LevelContainer extends React.Component {
     }
   }
 
-  handleSubmit(event) {
+  returnToIndex(event) {
     event.stopPropagation();
     event.preventDefault();
     this.props.RoutingStore.push('/');
@@ -35,8 +37,11 @@ export default class LevelContainer extends React.Component {
   render() {
     return (
       <div>
+        <div className={'back-button'} onClick={this.returnToIndex}>
+          <BackArrow  className={'back-arrow'}/>
+        </div>
         {this.props.children}
-        {this.state.winState && <WinStateModal handleSubmit={this.handleSubmit} />}
+        {this.state.winState && <WinStateModal handleSubmit={this.returnToIndex} />}
       </div>
     )
   }
