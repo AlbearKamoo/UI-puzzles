@@ -1,9 +1,7 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
-import winStateFunctions from './win-states.js'
-
-import AvatarImage from '../assets/avatar.svg';
+import LevelContainer from './LevelContainer';
 
 import './styles/level-styles.css';
 import './styles/level3.css';
@@ -30,12 +28,6 @@ export default class Level3 extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidUpdate() {
-    if (winStateFunctions[2](this.state)) {
-      this.props.RoutingStore.push('/')
-    }
-  }
-
   handleChange(e) {
     const value = e.target.checked === true ? 0 : 1;
     const moves = BOX_MOVES[e.target.name][value];
@@ -48,6 +40,7 @@ export default class Level3 extends React.Component {
 
   render() {
     return (
+      <LevelContainer levelIndex={2} levelState={this.state}>
         <div className={"level-container center-contents"}>
           <div>
               <input
@@ -73,6 +66,7 @@ export default class Level3 extends React.Component {
                 ></input>
           </div>
         </div>
+      </LevelContainer>
     )
   }
 }

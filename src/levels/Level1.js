@@ -1,7 +1,7 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
-import winStateFunctions from './win-states.js'
+import LevelContainer from './LevelContainer';
 
 import AvatarImage from '../assets/avatar.svg';
 
@@ -19,14 +19,7 @@ export default class Level1 extends React.Component {
       email: '',
       password: ''
     }
-
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentDidUpdate() {
-    if (winStateFunctions[0](this.state)) {
-      this.props.RoutingStore.push('/')
-    }
   }
 
   handleChange(e) {
@@ -35,6 +28,7 @@ export default class Level1 extends React.Component {
 
   render() {
     return (
+      <LevelContainer levelIndex={0} levelState={this.state}>
         <div className={"level-container center-contents"}>
           <div className={"level-1-stage center-contents"}>
             <div>
@@ -66,6 +60,7 @@ export default class Level1 extends React.Component {
             </div>
           </div>
         </div>
+      </LevelContainer>
     )
   }
 

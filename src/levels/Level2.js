@@ -1,9 +1,7 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
-import winStateFunctions from './win-states.js'
-
-import AvatarImage from '../assets/avatar.svg';
+import LevelContainer from './LevelContainer';
 
 import './styles/level-styles.css';
 import './styles/level2.css';
@@ -29,13 +27,6 @@ export default class Level2 extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidUpdate() {
-    let state = { blockColor: getRgbString(this.state)}
-    if (winStateFunctions[1](state)) {
-      this.props.RoutingStore.push('/')
-    }
-  }
-
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
@@ -43,6 +34,7 @@ export default class Level2 extends React.Component {
   render() {
     const blockColor = getRgbString(this.state);
     return (
+      <LevelContainer levelIndex={1} levelState={{ blockColor }} >
         <div className={"level-container center-contents"}>
           <div className={"level-2-stage"}>
             <div className={"slider-container"}>
@@ -84,6 +76,7 @@ export default class Level2 extends React.Component {
             </div>
           </div>
         </div>
+      </LevelContainer>
     )
   }
 }
