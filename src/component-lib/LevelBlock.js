@@ -1,6 +1,8 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
+import '../styles.css'
+
 @inject('RoutingStore')
 @observer
 export default class LevelBlock extends React.Component {

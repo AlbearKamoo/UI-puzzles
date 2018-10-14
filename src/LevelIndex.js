@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from 'react-router';
 
-import LevelBlock from './LevelBlock';
+import LevelBlock from './component-lib/LevelBlock';
 
 import levels from './level_data.json';
 
