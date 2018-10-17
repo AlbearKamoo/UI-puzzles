@@ -41,26 +41,26 @@ export default class Level3 extends React.Component {
   render() {
     return (
       <LevelContainer levelIndex={2} levelState={this.state}>
-        <div className={"level-container center-contents"}>
+        <div className={'level-container center-contents'}>
           <div>
               <input
-                className={"puzzle-checkbox " + (this.state.left ? "checked" : "")}
-                type="checkbox"
-                name="left"
+                className={'puzzle-checkbox ' + (this.state.left ? 'checked' : '')}
+                type='checkbox'
+                name='left'
                 onChange={this.handleChange}
                 checked={this.state.left}
                 ></input>
               <input
-                className={"puzzle-checkbox " + (this.state.middle ? "checked" : "")}
-                type="checkbox"
-                name="middle"
+                className={'puzzle-checkbox ' + (this.state.middle ? 'checked' : '')}
+                type='checkbox'
+                name='middle'
                 onChange={this.handleChange}
                 checked={this.state.middle}
                 ></input>
               <input
-                className={"puzzle-checkbox " + (this.state.right ? "checked" : "")}
-                type="checkbox"
-                name="right"
+                className={'puzzle-checkbox ' + (this.state.right ? 'checked' : '')}
+                type='checkbox'
+                name='right'
                 onChange={this.handleChange}
                 checked={this.state.right}
                 ></input>

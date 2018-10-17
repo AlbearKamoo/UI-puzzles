@@ -19,10 +19,10 @@ export default class Routes extends React.Component {
 
     return (
       <Switch location={location}>
-        <Route exact path="/" component={LevelIndex}/>
-        <Route exact path="/level-1" component={Level1} />
-        <Route exact path="/level-2" component={Level2} />
-        <Route exact path="/level-3" component={Level3} />
+        <Route exact path='/' component={LevelIndex}/>
+        <Route exact path='/level-1' component={Level1} />
+        <Route exact path='/level-2' component={Level2} />
+        <Route exact path='/level-3' component={Level3} />
       </Switch>
     )
   }
