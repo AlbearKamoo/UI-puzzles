@@ -1,5 +1,7 @@
+const emailRe = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 function level1WinState(state) {
-  return (state.email.length > 5 && state.password.length > 5);
+  return (emailRe.test(state.email) && state.password.length > 5 );
 }
 
 function level2WinState(state) {
