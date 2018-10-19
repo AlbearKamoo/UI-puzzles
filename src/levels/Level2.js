@@ -29,53 +29,51 @@ export default class Level2 extends React.Component {
   }
 
   handleChange(value, attribute) {
-    console.log(value);
-    console.log(attribute);
     this.setState({ [attribute]: value })
   }
 
   render() {
     const blockColor = getRgbString(this.state);
-    console.log(blockColor);
+
     return (
       <LevelContainer levelIndex={1} levelState={{ blockColor }} >
-        <div className={"level-container center-contents"}>
-          <div className={"level-2-stage"}>
-            <div className={"sliders-container"}>
+        <div className={'level-container center-contents'}>
+          <div className={'level-2-stage'}>
+            <div className={'sliders-container'}>
               <ColorSlider
-                max="255"
-                min="0"
-                step="51"
-                attribute="red"
-                color="red"
+                max='255'
+                min='0'
+                step='51'
+                attribute='red'
+                color='red'
                 onChange={this.handleChange}
                 value={this.state.red}
                 />
               <ColorSlider
-                max="255"
-                min="0"
-                step="51"
-                attribute="green"
-                color="green"
+                max='255'
+                min='0'
+                step='51'
+                attribute='green'
+                color='green'
                 onChange={this.handleChange}
                 value={this.state.green}
                 />
               <ColorSlider
-                max="255"
-                min="0"
-                step="51"
-                attribute="blue"
-                color="blue"
+                max='255'
+                min='0'
+                step='51'
+                attribute='blue'
+                color='blue'
                 onChange={this.handleChange}
                 value={this.state.blue}
                 />
             </div>
             <div
-              className={"goal-block"}
+              className={'goal-block'}
               style={{backgroundColor: blockColor}}>
             </div>
             <div>
-              <div className={"goal-block"}>
+              <div className={'goal-block'}>
               </div>
             </div>
           </div>

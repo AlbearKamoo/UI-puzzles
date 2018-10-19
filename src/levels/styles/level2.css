@@ -1,6 +1,9 @@
 .level-2-stage {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 390px;
+  justify-content: space-between;
 }
 
 .sliders-container {
