@@ -2,6 +2,7 @@ import React from 'react';
 import { inject, observer } from 'mobx-react';
 
 import LevelContainer from './LevelContainer';
+import ColorSlider from '../component-lib/ColorSlider';
 
 import './styles/level-styles.css';
 import './styles/level2.css';
@@ -27,44 +28,47 @@ export default class Level2 extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+  handleChange(value, attribute) {
+    console.log(value);
+    console.log(attribute);
+    this.setState({ [attribute]: value })
   }
 
   render() {
     const blockColor = getRgbString(this.state);
+    console.log(blockColor);
     return (
       <LevelContainer levelIndex={1} levelState={{ blockColor }} >
         <div className={"level-container center-contents"}>
           <div className={"level-2-stage"}>
-            <div className={"slider-container"}>
-              <input
+            <div className={"sliders-container"}>
+              <ColorSlider
                 max="255"
                 min="0"
                 step="51"
-                type="range"
-                name="red"
+                attribute="red"
+                color="red"
                 onChange={this.handleChange}
                 value={this.state.red}
-                ></input>
-              <input
+                />
+              <ColorSlider
                 max="255"
                 min="0"
                 step="51"
-                type="range"
-                name="green"
+                attribute="green"
+                color="green"
                 onChange={this.handleChange}
                 value={this.state.green}
-                ></input>
-              <input
+                />
+              <ColorSlider
                 max="255"
                 min="0"
                 step="51"
-                type="range"
-                name="blue"
+                attribute="blue"
+                color="blue"
                 onChange={this.handleChange}
                 value={this.state.blue}
-                ></input>
+                />
             </div>
             <div
               className={"goal-block"}

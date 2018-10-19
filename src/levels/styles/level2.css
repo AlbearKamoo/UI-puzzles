@@ -3,9 +3,12 @@
   flex-direction: row;
 }
 
-.slider-container {
+.sliders-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0px;
+  height: 100px;
 }
 
 .goal-block {
