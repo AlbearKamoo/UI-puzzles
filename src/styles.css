@@ -46,6 +46,10 @@
   transform: scale(1.15);
 }
 
+.win-block {
+  position: absolute;
+}
+
 .number-wrapper {
   height: 100px;
   width: 100px;
