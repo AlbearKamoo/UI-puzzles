@@ -7,24 +7,18 @@ import BackArrow from '../assets/back-arrow.svg';
 
 import winStateFunctions from './win-states.js'
 
-@inject('RoutingStore')
+@inject('RoutingStore', 'LevelStore')
 @observer
 export default class LevelContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      winState: false,
-    }
-
     this.returnToIndex = this.returnToIndex.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (!prevState.winState) {
-      if (winStateFunctions[this.props.levelIndex](this.props.levelState)) {
-        this.setState({ winState: true});
-      }
+    if (winStateFunctions[this.props.levelIndex](this.props.levelState)) {
+      this.props.LevelStore.setWinState(this.props.levelIndex)
     }
   }
 
@@ -35,13 +29,15 @@ export default class LevelContainer extends React.Component {
   }
 
   render() {
+    const didWin = this.props.LevelStore.winStates[this.props.levelIndex];
+
     return (
       <div>
         <div className={'back-button'} onClick={this.returnToIndex}>
           <BackArrow  className={'back-arrow'}/>
         </div>
         {this.props.children}
-        {this.state.winState && <WinStateModal handleSubmit={this.returnToIndex} />}
+        {didWin && <WinStateModal handleSubmit={this.returnToIndex} />}
       </div>
     )
   }

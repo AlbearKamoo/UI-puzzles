@@ -5,8 +5,9 @@ import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
 import { Provider } from 'mobx-react';
 
 import Routes from './Routes';
+import LevelStore from './stores/LevelStore';
 
-import './styles.css'
+import './styles.css';
 
 const browserHistory = createBrowserHistory();
 const RoutingStore = new RouterStore();
@@ -14,7 +15,7 @@ const history = syncHistoryWithStore(browserHistory, RoutingStore);
 
 const App = () => {
   return (
-    <Provider RoutingStore={RoutingStore}>
+    <Provider RoutingStore={RoutingStore} LevelStore={LevelStore}>
       <div className='background'>
         <Router history={history}>
           <Routes />
